@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" ng-app="siteApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>{{siteName}}</title>
+
+<link rel="stylesheet" href="/common/css/normalize.css" />
+<link rel="stylesheet" href="/common/css/foundation.min.css" />
+<link rel="stylesheet" href="/common/css/foundation-icons.css" />
+<link rel="stylesheet" href="/common/css/application.css" />
+
+<script type="text/javascript" src="/common/lib/angular/angular.min.js"></script>
+<script type="text/javascript"
+	src="/common/lib/angular/angular-route.min.js"></script>
+<script type="text/javascript"
+	src="/common/lib/angular/angular-resource.min.js"></script>
+<script type="text/javascript" src="/common/lib/draganddrop.js"></script>
+<script type="text/javascript" src="/common/lib/underscore-min.js"></script>
+<script type="text/javascript" src="/common/lib/restangular.min.js"></script>
+
+<script type="text/javascript" src="/common/js/commonControllers.js"></script>
+
+<script type="text/javascript" src="/site/js/siteApp.js"></script>
+<script type="text/javascript" src="/site/js/siteServices.js"></script>
+<script type="text/javascript" src="/site/js/siteControllers.js"></script>
+</head>
+
+<body ng-controller="SiteCtrl">
+	<div class="off-canvas-wrap">
+		<div class="inner-wrap">
+
+			<div style="background: #333333; width: 2.8125em;" class="left-small">
+				<a class="left-off-canvas-toggle menu-icon"><span></span></a>
+			</div>
+			<!-- Off Canvas Menu -->
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">
+					<li><a ng-click="addPage()">Add Page</a></li>
+					<li class="exit-off-canvas"><a ng-click="managePage()">Manage Page</a></li>
+				</ul>
+			</aside>
+
+			<!-- main content goes here -->
+			<ng-include src="gSite.siteTemplate.url"></ng-include>
+
+			<!-- close the off-canvas menu -->
+			<a class="exit-off-canvas"></a>
+
+		</div>
+	</div>
+	<div ng-controller="WebletListingCtrl">
+		<div id="webletListing" class="reveal-modal" data-reveal>
+			<ng-include src="'/common/pages/webletListing.html'"></ng-include>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+	</div>
+	<div ng-controller="PageSettingsCtrl" id="managePage" class="reveal-modal" data-reveal>
+		<ng-include src="'/site/pageSettingsDetail.html'"></ng-include>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	<script type="text/javascript"
+		src="/common/lib/foundation/modernizr.js"></script>
+	<script src="/common/lib/jquery/jquery.js"></script>
+	<script src="/common/lib/foundation/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>
