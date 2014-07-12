@@ -35,7 +35,10 @@ public class SiteFilter implements Filter {
 			httpResponse.sendRedirect("greenscape/");
 		} else if (uri.endsWith("/")) {
 			String newUri = "../index.html";
-			httpRequest.getRequestDispatcher(newUri).forward(request, response);
+			// TODO: fix this
+			httpResponse.sendRedirect("../index.html");
+			// httpRequest.getRequestDispatcher(newUri).forward(request,
+			// response);
 		} else {
 			chain.doFilter(request, response);
 		}

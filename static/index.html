@@ -15,7 +15,10 @@
 <script type="text/javascript"
 	src="/common/lib/angular/angular-route.min.js"></script>
 <script type="text/javascript"
+	src="/common/lib/angular/angular-sanitize.min.js"></script>
+<script type="text/javascript"
 	src="/common/lib/angular/angular-resource.min.js"></script>
+<script type="text/javascript" src="/common/lib/angular-load.min.js"></script>
 <script type="text/javascript" src="/common/lib/draganddrop.js"></script>
 <script type="text/javascript" src="/common/lib/underscore-min.js"></script>
 <script type="text/javascript" src="/common/lib/restangular.min.js"></script>
@@ -38,7 +41,8 @@
 			<aside class="left-off-canvas-menu">
 				<ul class="off-canvas-list">
 					<li><a ng-click="addPage()">Add Page</a></li>
-					<li class="exit-off-canvas"><a ng-click="managePage()">Manage Page</a></li>
+					<li class="exit-off-canvas"><a ng-click="managePage()">Manage
+							Page</a></li>
 				</ul>
 			</aside>
 
@@ -56,10 +60,13 @@
 			<a class="close-reveal-modal">&#215;</a>
 		</div>
 	</div>
-	<div ng-controller="PageSettingsCtrl" id="managePage" class="reveal-modal" data-reveal>
+	<div ng-controller="PageSettingsCtrl" id="managePage"
+		class="reveal-modal" data-reveal>
 		<ng-include src="'/site/pageSettingsDetail.html'"></ng-include>
 		<a class="close-reveal-modal">&#215;</a>
 	</div>
+	<!-- move this to weblet-tpl.html after foundation issue is resolved -->
+	
 	<script type="text/javascript"
 		src="/common/lib/foundation/modernizr.js"></script>
 	<script src="/common/lib/jquery/jquery.js"></script>
