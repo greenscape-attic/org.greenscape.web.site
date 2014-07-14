@@ -4,7 +4,9 @@ X-Web-Resource: /site
 X-Web-Resource-Default-Page: index.html
 X-Web-Resource-Version: 1.1
 Private-Package: org.greenscape.web.site
--buildpath: javax.servlet,\
+-buildpath:  \
+	javax.servlet,\
 	org.eclipse.osgi.services,\
-	org.greenscape.web.common;version=latest
+	org.greenscape.web.common;version=latest,\
+	org.greenscape.core;version=latest
 -dsannotations: *

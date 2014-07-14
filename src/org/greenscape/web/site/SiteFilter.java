@@ -11,7 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.greenscape.organization.OrganizationModel;
+import org.greenscape.core.model.OrganizationModel;
 import org.greenscape.web.common.CommonConstants;
 import org.osgi.service.component.annotations.Component;
 
