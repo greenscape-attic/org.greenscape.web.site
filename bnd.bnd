@@ -10,3 +10,5 @@ Private-Package: org.greenscape.web.site
 	org.greenscape.web.common;version=latest,\
 	org.greenscape.core;version=latest
 -dsannotations: *
+javac.source=1.8
+javac.target=1.8
